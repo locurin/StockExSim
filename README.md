@@ -8,36 +8,36 @@ The app record transactions using utc-3 timezone (Buenos Aires), but can be easi
 
 ## Table of contents
 
-*[Technologies](#technologies)
+* [Technologies](#technologies)
 
-*[functionalities](#functionalities)
+* [functionalities](#functionalities)
 
-*[version](#version)
+* [version](#version)
 
-*[credits](#credits)
+* [credits](#credits)
 
 
 ## Technologies
 
-*[Bootstrap](https://getbootstrap.com/) v.4.6x
+* [Bootstrap](https://getbootstrap.com/) v.4.6x
 
-*[Django](https://flask.palletsprojects.com/en/1.1.x/) v.1.1.x
+* [Django](https://flask.palletsprojects.com/en/1.1.x/) v.1.1.x
 
-*[Python](https://www.python.org/) v.3.9.1
+* [Python](https://www.python.org/) v.3.9.1
 
 
 
 ## Scope of Functionalities
 
-*StockExSim allows user to create a free account and login storing its data in a SQL database. When a new user is created, they are asigned $10000 fake dollars to their account so they can start interacting with this stock shares market offered by the app.
+* StockExSim allows user to create a free account and login storing its data in a SQL database. When a new user is created, they are asigned $10000 fake dollars to their account so they can start interacting with this stock shares market offered by the app.
 
-*The app uses an API from [IEX Cloud](https://iexcloud.io/) that respond to user's request to access stock shares symbols, price and name of the company it represents. The API is updated in real time, so every quoting shows the current prince of every stock share at the given time.
+* The app uses an API from [IEX Cloud](https://iexcloud.io/) that respond to user's request to access stock shares symbols, price and name of the company it represents. The API is updated in real time, so every quoting shows the current prince of every stock share at the given time.
 
-*Registered users are allowed to quote stock shares to find out its price, buy as many as they want as long they can afford it and sell them whenever they want. There is also a track of revenue which is changed when users sell their stock to a higher/lower price that they first paid for them. 
+* Registered users are allowed to quote stock shares to find out its price, buy as many as they want as long they can afford it and sell them whenever they want. There is also a track of revenue which is changed when users sell their stock to a higher/lower price that they first paid for them. 
 
-*A log recording every transaction made by the user is also available in the app, including every piece of useful information regarding them (date, revenue, amount, type of transaction).
+* A log recording every transaction made by the user is also available in the app, including every piece of useful information regarding them (date, revenue, amount, type of transaction).
 
-*There is a profile page where users can see their account info (username, email, total money, amount of succesful transactions). Also, in this sections they can change their username or password whenever they wish accessing. An option to permanently delete their account is present here too.
+* There is a profile page where users can see their account info (username, email, total money, amount of succesful transactions). Also, in this sections they can change their username or password whenever they wish accessing. An option to permanently delete their account is present here too.
 
 ##  Version
 
