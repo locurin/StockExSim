@@ -1,0 +1,65 @@
+
+ .navbar-brand
+{
+    /* size for brand */
+    font-size: xx-large;
+}
+
+/* colors for brand */
+
+ .navbar-brand .purple
+{
+    color: #c9247f;
+}
+
+ .navbar-brand .red
+{
+    color: #ea433b;
+}
+ .navbar-brand .yellow
+{
+    color: #f5b82e;
+}
+ .navbar-brand .green
+{
+    color: #2e944b;
+}
+
+ .navbar-brand .blue
+{
+    color: #537fbe;
+}
+
+main .form-control
+{
+    /* center form controls */
+    display: inline-block;
+
+    /* override Bootstrap's 100% width for form controls */
+    width: auto;
+}
+
+main
+{
+    /* scroll horizontally as needed */
+    overflow-x: auto;
+
+    /* center contents */
+    text-align: center;
+
+    margin-top: 3%;
+}
+
+main img
+{
+    /* constrain images on small screens */
+    max-width: 100%;
+}
+
+
+@media (max-width: 500px) {
+    #hidden {
+        display: none;
+    }
+
+}

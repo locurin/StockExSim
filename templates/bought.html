@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Buy shares
+{% endblock %}
+
+{% block main %}
+<h4>Congrats!</h4>
+<p>Bought {{number}} share(s) from {{company}} ({{symbol}})</p>
+<p>Paid: ${{"{:.2f}".format(paid)}}</p>
+
+
+<div style="margin-bottom: 3%"><form style="display: inline-block" action="/" method="get"><button class="btn btn-dark" type="submit" id="submit">Main Page</button></form>
+<form style="display: inline-block" action="/buy" method="get"><button class="btn btn-dark" type="submit" id="submit">Buy more</button></form></div>
+
+{% endblock %}

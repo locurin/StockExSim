@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+{% block main %}
+ <form action="/quote" method="post">
+        <h2>Worldwide Shares in seconds</h2>
+        <p>Enter a Company Stock Exchange Symbol i.e. AAPL for Apple</p>
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" id="symbol" name="symbol" placeholder="Symbol" type="text" required>
+        </div>
+        <button class="btn btn-dark" type="submit" id="submit">Quote</button>
+    </form>
+
+    <p style="margin-top: 1%">For a full list of available Stock Symbols visit <a href="https://iextrading.com/trading/eligible-symbols/">IEX Elegible Symbols.</a></p>
+    
+    {% if alerter == 90: %}
+    <script>$(document).ready(function() {
+        alert("That symbol doesn't exist. Please try another.");
+    });</script>
+    {% endif %}
+
+{% endblock %}

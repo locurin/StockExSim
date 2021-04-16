@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Login
+{% endblock %}
+
+{% block main %}
+    <form action="/login" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus required class="form-control" name="username" placeholder="Username" type="text">
+        </div>
+        <div class="form-group">
+            <input required class="form-control" name="password" placeholder="Password" type="password">
+        </div>
+        <button class="btn btn-dark" type="submit" style="margin-bottom: 3%">Login</button>
+    </form>
+
+
+<!-- Jquery alerters -->
+      {% if alerter == 9: %}
+<script>$(document).ready(function() {
+    alert("Account created. Welcome to Stock Ex Sim! Log in now.");
+});</script>
+{% endif %}
+
+    {% if alerter == 10: %}
+<script>$(document).ready(function() {
+    alert("Account deleted permanently!");
+});</script>
+{% endif %}
+
+{% if alerter == 22: %}
+<script>$(document).ready(function() {
+    alert("Incorrect username or password. Please try again.");
+});</script>
+{% endif %}
+{% endblock %}

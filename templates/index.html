@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Balance
+{% endblock %}
+
+{% block main %}
+
+ <h3 style="margin-top: -0.8%; margin-bottom: 2%">Balance</h3>
+
+ <table class="table table-striped" id="index_table">
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Name</th>
+                <th>Shares</th>
+                <th>Price</th>
+                <th>Paid</th>
+                <th>Revenue</th>
+                <th>TOTAL</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <td colspan="6"></td>
+                <td><b>Total: {{total}}</b></td>
+            </tr>
+        </tfoot>
+        <tbody>
+                {% for i in range(looper): %}
+                <tr>
+                    <td>{{symbol[i]}}</td>
+                    <td>{{company[i]}}</td>
+                    <td>{{shares[i]}}</td>
+                    <td>$ {{"{:.2f}".format(price[i])}}</td>
+                    <td>$ {{"{:.2f}".format(paid[i])}}</td>
+                    <td>% {{"{:.2f}".format(revenue[i])}}</td>
+                    <td>$ {{"{:.2f}".format(subtotal[i])}}</td>
+                </tr>
+                {% endfor %}
+
+
+            <tr>
+                <td colspan="6" style="text-align:left" ><span id="hidden">&nbsp;&nbsp;</span>&nbsp;&nbsp;CASH</td>
+                <td>{{cash}}</td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}

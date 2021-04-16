@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Profile
+{% endblock %}
+
+{% block main %}
+<h2>PROFILE INFO</h2>
+<hr>
+<p><b>USERNAME: </b>{{user}}</p>
+<p><b>PASSWORD: </b>********</p>
+<p><b>TRANSACTIONS TOTAL:</b> {{transactions}}</p>
+<p><b>SHARES NET VALUE:</b> {{subtotal}}</p>
+<p><b>CASH:</b> ${{cash}}</p>
+
+
+<div style="margin-bottom: 3%"><form style="display: inline-block" method="get" action="/change_username"><button style="margin-bottom: 3%" class="btn btn-dark" type="submit" id="change_username_button">Change username</button></form>
+<form style="display: inline-block" method="get" action="/change_password"><button style="margin-bottom: 3%" class="btn btn-dark" type="submit" id="change_password_button">Change password</button></form>
+<form style="display: inline-block" action="/profile" method="post" name="delete"><button style="margin-bottom: 3%" class="btn btn-dark" type="submit" id="delete">Delete Account</button></form></div>
+
+
+
+
+<!-- JQUERY FUNCTIONS -->
+
+<!-- are you sure delete account -->
+<script>$(function() {
+    $('#delete').click(function() {
+        return window.confirm("Do you wish to permanently delete your account?");
+    });
+});</script>
+
+
+<!-- ALERTERS -->
+{% if alerter == 2: %}
+<script>$(document).ready(function() {
+    alert("Username changed succesfully!");
+});</script>
+{% endif %}
+
+{% if alerter == 71: %}
+<script>$(document).ready(function() {
+    alert("Password changed succesfully!");
+});</script>
+{% endif %}
+{% endblock %}

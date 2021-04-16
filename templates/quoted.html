@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+{% block main %}
+
+        <h2>Shares available:</h2>
+        <ul>
+            <li style= "list-style:none"><b>Symbol:</b> {{symbol}}</li>
+            <li style= "list-style:none"><b>Company:</b> {{name}}</li>
+            <li style= "list-style:none"><b>Current prince per stock:</b> ${{"{:.2f}".format(price)}}</li>
+        </ul>
+            <button class="btn btn-dark" style="margin-bottom: 3%"><a href="/quote" style="color: white; text-decoration: none;">Quote again</a></button>
+{% endblock %}

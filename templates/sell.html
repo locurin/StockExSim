@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sell shares
+{% endblock %}
+
+{% block main %}
+<form action="/sell" method="post">
+        <p>Enter a Company Stock Exchange Symbol i.e. AAPL for Apple</p>
+        <select class="form-control" name="symbol_sell" id="symbol_sell" style="margin-bottom: 2%" required>
+                <option disabled selected value="">Symbol</option>
+                    {% for i in range(looper): %}
+                    <option value="{{symbols[i]['symbol']}}">{{symbols[i]["symbol"]}}</option>
+                    {% endfor %}
+            </select>
+        <div class="form-group">
+            <input autocomplete="off" class="form-control" min="1" name="shares_sell" placeholder="Amount" type="number" id="shares_sell" required>
+        </div>
+        <button style="margin-bottom: 3%" class="btn btn-dark" type="submit" id="submit">Sell</button>
+    </form>
+
+    {% if alerter == 30: %}
+<script>$(document).ready(function() {
+    alert("There is a problem with this kind of stock. Please contact support.");
+});</script>
+{% endif %}
+{% if alerter == 31: %}
+<script>$(document).ready(function() {
+    alert("You don't have enough shares to sale. Try again.");
+});</script>
+{% endif %}
+{% endblock %}

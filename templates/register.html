@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block tittle %}
+    Register
+{% endblock %}
+
+{% block main %}
+<form action="/register" method="post">
+        <h4 class="alert alert-primary" role="alert">This is a simulator, not a real website. Please do not use real personal info.</h4>
+        <div class="form-group">
+            <p>Choose an username:</p>
+            <input autocomplete="off" autofocus required class="form-control" name="username" placeholder="Username" type="text" minlength="4" maxlength="15" pattern="^\S+$">
+        </div>
+        <div class="form-group">
+            <p>Choose a password:</p>
+            <input  required class="form-control" name="password" placeholder="Password" type="password" minlength="5" maxlength="15" pattern="^\S+$">
+        </div>
+        <div class="form-group">
+            <p>Confirm your password:</p>
+            <input required class="form-control" name="confirm" placeholder="Repeat password" type="password" minlength="5" maxlength="15" pattern="^\S+$">
+        </div>
+        <button class="btn btn-dark" type="submit" id="register" style="margin-bottom: 3%">Register</button>
+    </form>
+
+    {% if alerter == 20: %}
+<script>$(document).ready(function() {
+    alert("passwords don't match.");
+});</script>
+{% endif %}
+
+{% if alerter == 21: %}
+<script>$(document).ready(function() {
+    alert("Username already taken.");
+});</script>
+{% endif %}
+{% endblock %}
+

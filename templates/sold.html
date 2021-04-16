@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sell shares
+{% endblock %}
+
+{% block main %}
+<h4>Congrats!</h4>
+<p>Sold {{number}} share(s) from {{company}} ({{symbol}})</p>
+<p>Income: ${{"{:.2f}".format(profit)}}</p>
+
+<div style="margin-bottom: 3%"><form style="display: inline-block" action="/" method="get"><button class="btn btn-dark" type="submit" id="submit">Main Page</button></form>
+<form style="display: inline-block" action="/sell" method="get"><button class="btn btn-dark" type="submit" id="submit">Sell more</button></form></div>
+
+{% endblock %}
