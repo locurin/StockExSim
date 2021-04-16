@@ -25,6 +25,7 @@ The app record transactions using utc-3 timezone (Buenos Aires), but can be easi
 
 * [Python](https://www.python.org/) v.3.9.1
 
+* [SQLite3](https://www.sqlite.org/) v.3.35.2
 
 
 ## Scope of Functionalities
