@@ -34,11 +34,15 @@ app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
 
 # Configure CS50 Library to use SQLite database
-db = SQL("sqlite:///finance.db")
+db = SQL("sqlite:///finance.db") # IMPORTANT: This route may need to be updated when deploying to correctly access the database
 
 # Make sure API key is set
 if not os.environ.get("API_KEY"):
-    raise RuntimeError("API_KEY not set")
+#set api key for the stock quote engine
+    try:
+        os.environ["API_KEY"] = "pk_5786865375144740b7e0e0f8efb7bf89" # IMPORTANT: The API key can be changed for other one given to any user of IEX Cloud.
+    except:
+        raise RuntimeError("API_KEY not set")
 
 
 # index route
